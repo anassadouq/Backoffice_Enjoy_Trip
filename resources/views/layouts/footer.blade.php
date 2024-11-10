@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="upper_portion">
-                        <a href="index.html"><figure class="footer-logo mb-0"><img class="img-fluid" src="assets/images/footer-logo.png" alt="image"></figure></a>                    
+                        <a href="index.html"><figure class="footer-logo mb-0"><img class="img-fluid" src="assets/images/Mascotte.png" alt="image"></figure></a>                    
                         <p class="text-size-18 mb-0">Sign up for the newsletter:</p>
                         <form action="javascript:;">
                             <div class="form-group position-relative mb-0">
@@ -44,11 +44,11 @@
                         <div class="links">
                             <h5 class="heading">Navigation</h5>
                             <ul class="list-unstyled mb-0">
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="index.html">Home</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="about.html">About Us</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="destination.html">Destinations</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="blog.html">Blog</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="contact.html">Contact</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/">Home</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/about">About Us</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/destination">Destinations</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/blog">Blog</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -56,11 +56,10 @@
                         <div class="use-link links">
                             <h5 class="heading">Explore</h5>
                             <ul class="list-unstyled mb-0">
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="service.html">Services</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="service.html">What We Offer</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="about.html">Our Story</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="single-blog.html">Latest Posts</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="contact.html">Help Center</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/service">Services</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/service">What We Offer</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/about">Our Story</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/contact">Help Center</a></li>
                             </ul>
                         </div>
                     </div>
@@ -70,7 +69,7 @@
                             <ul class="list-unstyled mb-0">
                                 <li class="text">
                                     <i class="fa-solid fa-phone"></i>
-                                    <a href="tel:++61383766284" class="text-decoration-none">+61 3 8376 6284</a>
+                                    <a href="tel:+212661950492" class="text-decoration-none">+212 661 950 492</a>
                                 </li>
                                 <li class="text">
                                     <i class="fa-solid fa-envelope"></i>

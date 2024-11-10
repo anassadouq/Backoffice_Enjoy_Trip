@@ -81,7 +81,7 @@
                     </figure>
                     <h4>Exciting Journeys</h4>
                     <p class="text-size-16">Embark on thrilling expeditions and immerse yourself in unforgettable experiences.</p>
-                    <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/service-detail" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto">
@@ -91,7 +91,7 @@
                     </figure>
                     <h4>Expert Guides</h4>
                     <p class="text-size-16">Our seasoned guides ensure a safe and enriching adventure, tailored to your needs.</p>
-                    <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/service-detail" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto">
@@ -101,7 +101,7 @@
                     </figure>
                     <h4>Personalized Packages</h4>
                     <p class="text-size-16">Choose from a variety of custom packages designed to suit every traveler's desire.</p>
-                    <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/service-detail" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

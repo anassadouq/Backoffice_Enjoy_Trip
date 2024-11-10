@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\TripController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\ReservationController;
 
@@ -40,7 +40,7 @@ Route::get('/contact', function () {
 })->name('contact');
 
 // Trips
-Route::resource('trip', TripController::class)->middleware('auth');
+Route::resource('admin', AdminController::class)->middleware('auth');
 // Reservation resource routes without index and destroy
 Route::resource('reservation', ReservationController::class)->except(['index', 'destroy']);
 

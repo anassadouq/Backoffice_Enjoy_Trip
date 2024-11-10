@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="tabs-box tabs-options">
+        <div class="tabs-box tabs-options" id="contact">
             <ul class="nav nav-tabs" data-aos="fade-up">
                 <li><a class="active" data-toggle="tab" href="#all">All</a></li>
                 <li><a data-toggle="tab" href="#morocco">Morocco</a></li>
@@ -47,32 +47,32 @@
                 <div id="all" class="tab-pane fade in active show">
                     <div class="row" data-aos="fade-up">
                         <div class="owl-carousel owl-theme">
-                            @foreach($trips as $trip)
+                            @foreach($admins as $admin)
                                 <div class="item">
                                     <div class="place-box">
                                         <figure class="image mb-0">
-                                            <img src="{{ asset('assets/images/' . $trip->image) }}" alt="image" class="img-fluid">
+                                            <img src="{{ asset('assets/images/' . $admin->image) }}" alt="image" class="img-fluid">
                                         </figure>
                                         <div class="lower_content">
                                             <div class="content">
                                                 <div class="calendar">
                                                     <i class="fa-solid fa-calendar-days"></i>
                                                     <span class="day">
-                                                        {{ \Carbon\Carbon::parse($trip->dateD)->diffInDays(\Carbon\Carbon::parse($trip->dateF)) }} Days
+                                                        {{ \Carbon\Carbon::parse($admin->dateD)->diffInDays(\Carbon\Carbon::parse($admin->dateF)) }} Days
                                                     </span>
 
                                                 </div>
                                                 <div class="people">
                                                     <i class="fa-solid fa-user"></i>
-                                                    <span class="person">{{ $trip->nombrepersonne }} Person</span>
+                                                    <span class="person">{{ $admin->nombrepersonne }} Person</span>
                                                 </div>
                                             </div>
-                                            <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $trip->id }}">
-                                                <h4>{{ $trip->name }}</h4>
+                                            <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $admin->id }}">
+                                                <h4>{{ $admin->name }}</h4>
                                             </a>
                                             <div class="value">
-                                                <span class="money"><span class="counter">{{ $trip->price }}</span>DH</span>
-                                                <a href="{{ route('reservation.create', ['id_trip' => $trip->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                                                <span class="money"><span class="counter">{{ $admin->price }}</span>DH</span>
+                                                <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -84,33 +84,33 @@
                 <div id="morocco" class="tab-pane fade">
                     <div class="row" data-aos="fade-up">
                         <div class="owl-carousel owl-theme">
-                            @foreach($trips as $trip)
-                                @if($trip->where == "Maroc")
+                            @foreach($admins as $admin)
+                                @if($admin->where == "Maroc")
                                     <div class="item">
                                         <div class="place-box">
                                             <figure class="image mb-0">
-                                                <img src="{{ asset('assets/images/' . $trip->image) }}" alt="image" class="img-fluid">
+                                                <img src="{{ asset('assets/images/' . $admin->image) }}" alt="image" class="img-fluid">
                                             </figure>
                                             <div class="lower_content">
                                                 <div class="content">
                                                     <div class="calendar">
                                                         <i class="fa-solid fa-calendar-days"></i>
                                                         <span class="day">
-                                                            {{ \Carbon\Carbon::parse($trip->dateD)->diffInDays(\Carbon\Carbon::parse($trip->dateF)) }} Days
+                                                            {{ \Carbon\Carbon::parse($admin->dateD)->diffInDays(\Carbon\Carbon::parse($admin->dateF)) }} Days
                                                         </span>
 
                                                     </div>
                                                     <div class="people">
                                                         <i class="fa-solid fa-user"></i>
-                                                        <span class="person">{{ $trip->nombrepersonne }} Person</span>
+                                                        <span class="person">{{ $admin->nombrepersonne }} Person</span>
                                                     </div>
                                                 </div>
-                                                <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $trip->id }}">
-                                                    <h4>{{ $trip->name }}</h4>
+                                                <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $admin->id }}">
+                                                    <h4>{{ $admin->name }}</h4>
                                                 </a>
                                                 <div class="value">
-                                                    <span class="money"><span class="counter">{{ $trip->price }}</span>DH</span>
-                                                    <a href="{{ route('reservation.create', ['id_trip' => $trip->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                                                    <span class="money"><span class="counter">{{ $admin->price }}</span>DH</span>
+                                                    <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -123,33 +123,33 @@
                 <div id="out" class="tab-pane fade">
                     <div class="row" data-aos="fade-up">
                         <div class="owl-carousel owl-theme">
-                            @foreach($trips as $trip)
-                                @if($trip->where == "Hors")
+                            @foreach($admins as $admin)
+                                @if($admin->where == "Hors")
                                     <div class="item">
                                         <div class="place-box">
                                             <figure class="image mb-0">
-                                                <img src="{{ asset('assets/images/' . $trip->image) }}" alt="image" class="img-fluid">
+                                                <img src="{{ asset('assets/images/' . $admin->image) }}" alt="image" class="img-fluid">
                                             </figure>
                                             <div class="lower_content">
                                                 <div class="content">
                                                     <div class="calendar">
                                                         <i class="fa-solid fa-calendar-days"></i>
                                                         <span class="day">
-                                                            {{ \Carbon\Carbon::parse($trip->dateD)->diffInDays(\Carbon\Carbon::parse($trip->dateF)) }} Days
+                                                            {{ \Carbon\Carbon::parse($admin->dateD)->diffInDays(\Carbon\Carbon::parse($admin->dateF)) }} Days
                                                         </span>
 
                                                     </div>
                                                     <div class="people">
                                                         <i class="fa-solid fa-user"></i>
-                                                        <span class="person">{{ $trip->nombrepersonne }} Person</span>
+                                                        <span class="person">{{ $admin->nombrepersonne }} Person</span>
                                                     </div>
                                                 </div>
-                                                <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $trip->id }}">
-                                                    <h4>{{ $trip->name }}</h4>
+                                                <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $admin->id }}">
+                                                    <h4>{{ $admin->name }}</h4>
                                                 </a>
                                                 <div class="value">
-                                                    <span class="money"><span class="counter">{{ $trip->price }}</span>DH</span>
-                                                    <a href="{{ route('reservation.create', ['id_trip' => $trip->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                                                    <span class="money"><span class="counter">{{ $admin->price }}</span>DH</span>
+                                                    <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -171,7 +171,7 @@
                 <div class="join_content text-center" data-aos="fade-up">
                     <h6 class="text-white">Come & Join Us</h6>
                     <h2 class="text-white">Making Adventure Tours and Activities Accessible and Affordable for Everyone.</h2>
-                    <a href="./contact.html" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -310,9 +310,9 @@
 </section>
 
 <!-- Project SECTION POPUP -->
-@foreach($trips as $trip)
+@foreach($admins as $admin)
     <div class="project_modal">
-        <div id="blog-model-{{ $trip->id }}" class="modal fade blog-model-con" tabindex="-1" aria-hidden="true">
+        <div id="blog-model-{{ $admin->id }}" class="modal fade blog-model-con" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
             <div class="modal-content">
                     <div class="modal-header">
@@ -324,19 +324,19 @@
                         <div class="blog-box-item mb-0">
                             <div class="blog-img">
                                 <figure class="mb-0">
-                                    <img src="{{ asset('assets/images/' . $trip->image) }}" alt="blog-img" class="img-fluid">
+                                    <img src="{{ asset('assets/images/' . $admin->image) }}" alt="blog-img" class="img-fluid">
                                 </figure>
                             </div>
                             <div class="project_content">
-                                <h4>{{ $trip->name }}</h4>
-                                <span class="text">{{ $trip->description }}</span>
+                                <h4>{{ $admin->name }}</h4>
+                                <span class="text">{{ $admin->description }}</span>
                                 <div class="properties">
                                     <ul class="list-unstyled mb-0">
                                         
                                     </ul>
                                 </div>
 
-                                <a href="{{ route('reservation.create', ['id_trip' => $trip->id]) }}" class="text-decoration-none all_button">Book now<i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none all_button">Book now<i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>

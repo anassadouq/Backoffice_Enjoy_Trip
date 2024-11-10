@@ -69,23 +69,23 @@
         </div>
         <div class="row" data-aos="fade-up">
             <div class="owl-carousel">
-                @foreach ($trips as $trip)
+                @foreach ($admins as $admin)
                     <div class="item">
                         <div class="explore-box">
                             <figure class="image mb-0">
-                                <img src="/images/{{$trip['image']}}" alt="image" class="img-fluid">
+                                <img src="/images/{{$admin['image']}}" alt="image" class="img-fluid">
                             </figure>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
-                                <span class="rate text-white">{{ $trip->rating }}</span>
+                                <span class="rate text-white">{{ $admin->rating }}</span>
                             </div>
                             <div class="content">
                                 <div class="text">
                                     <div class="place">
                                         <i class="fa-solid fa-location-dot"></i>
-                                        <span class="text-white">{{ $trip->places }} Places</span>
+                                        <span class="text-white">{{ $admin->places }} Places</span>
                                     </div>
-                                    <h4 class="text-white mb-0">{{ $trip->name }}</h4>
+                                    <h4 class="text-white mb-0">{{ $admin->name }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +208,7 @@
                         <img src="./assets/images/service-icon5.png" alt="image" class="img-fluid">
                     </figure>
                     <h4>Family Adventures</h4>
-                    <p class="text-size-16">Create lasting memories with family trips that are fun and suitable for all ages.</p>
+                    <p class="text-size-16">Create lasting memories with family admins that are fun and suitable for all ages.</p>
                     <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -233,7 +233,7 @@
                 <div class="join_content text-center" data-aos="fade-up">
                     <h6 class="text-white">Come & Join Us</h6>
                     <h2 class="text-white">Making Adventure Tours and Activities Accessible and Affordable for Everyone.</h2>
-                    <a href="./contact.html" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -246,39 +246,39 @@
         <div class="row">
             <div class="col-12 mx-auto">
                 <div class="place_content text-center" data-aos="fade-up">
-                    <h6>Best Places</h6>
-                    <h2>Popular Destinations</h2>
+                    <h6 >Best Places</h6>
+                    <h2 id="contact">Popular Destinations</h2>
                 </div>
             </div>
         </div>
         <div class="row" data-aos="fade-up">
             <div class="owl-carousel owl-theme">
-                @foreach($trips as $trip)
+                @foreach($admins as $admin)
                 <div class="item">
                     <div class="place-box">
                         <figure class="image mb-0">
-                            <img src="{{ asset('assets/images/' . $trip->image) }}" alt="image" class="img-fluid">
+                            <img src="{{ asset('assets/images/' . $admin->image) }}" alt="image" class="img-fluid">
                         </figure>
                         <div class="lower_content">
                             <div class="content">
                                 <div class="calendar">
                                     <i class="fa-solid fa-calendar-days"></i>
                                     <span class="day">
-                                        {{ \Carbon\Carbon::parse($trip->dateD)->diffInDays(\Carbon\Carbon::parse($trip->dateF)) }} Days
+                                        {{ \Carbon\Carbon::parse($admin->dateD)->diffInDays(\Carbon\Carbon::parse($admin->dateF)) }} Days
                                     </span>
 
                                 </div>
                                 <div class="people">
                                     <i class="fa-solid fa-user"></i>
-                                    <span class="person">{{ $trip->nombrepersonne }} Person</span>
+                                    <span class="person">{{ $admin->nombrepersonne }} Person</span>
                                 </div>
                             </div>
-                            <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $trip->id }}">
-                                <h4>{{ $trip->name }}</h4>
+                            <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $admin->id }}">
+                                <h4>{{ $admin->name }}</h4>
                             </a>
                             <div class="value">
-                                <span class="money"><span class="counter">{{ $trip->price }}</span>DH</span>
-                                <a href="{{ route('reservation.create', ['id_trip' => $trip->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                                <span class="money"><span class="counter">{{ $admin->price }}</span>DH</span>
+                                <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -423,9 +423,9 @@
 </section>
 
 <!-- Project SECTION POPUP -->
-@foreach($trips as $trip)
+@foreach($admins as $admin)
 <div class="project_modal">
-    <div id="blog-model-{{ $trip->id }}" class="modal fade blog-model-con" tabindex="-1" aria-hidden="true">
+    <div id="blog-model-{{ $admin->id }}" class="modal fade blog-model-con" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
            <div class="modal-content">
                 <div class="modal-header">
@@ -437,19 +437,19 @@
                     <div class="blog-box-item mb-0">
                         <div class="blog-img">
                             <figure class="mb-0">
-                                <img src="{{ asset('assets/images/' . $trip->image) }}" alt="blog-img" class="img-fluid">
+                                <img src="{{ asset('assets/images/' . $admin->image) }}" alt="blog-img" class="img-fluid">
                             </figure>
                         </div>
                         <div class="project_content">
-                            <h4>{{ $trip->name }}</h4>
-                            <span class="text">{{ $trip->description }}</span>
+                            <h4>{{ $admin->name }}</h4>
+                            <span class="text">{{ $admin->description }}</span>
                             <div class="properties">
                                 <ul class="list-unstyled mb-0">
                                     
                                 </ul>
                             </div>
 
-                            <a href="{{ route('reservation.create', ['id_trip' => $trip->id]) }}" class="text-decoration-none all_button">Book now<i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none all_button">Book now<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>

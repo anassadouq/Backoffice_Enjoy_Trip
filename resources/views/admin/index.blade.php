@@ -1,6 +1,6 @@
     <html>
         <head>
-            <title>Trips</title>
+            <title>admins</title>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
             <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css">
@@ -63,38 +63,38 @@
             }
         </style>
 
-<header class="header">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <a class="navbar-brand" href="/">
-                    <figure class="logo mb-0"><img src="assets/images/logo.png" alt="image" class="img-fluid"></figure>
-                </a>
+        <header class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <a class="navbar-brand" href="/">
+                        <figure class="logo mb-0"><img src="assets/images/logo.png" alt="image" class="img-fluid"></figure>
+                    </a>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item dropdown active">
-                            <a class="nav-link " href="/trip">Trips </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/reservation">Reservation</a>
-                        </li>                        
-                        <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <h5> 
-                                <span class="material-symbols-outlined">logout</span>
-                                Logout
-                            </h5>
-                        </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown active">
+                                <a class="nav-link " href="/admin">Trips </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/reservation">Reservation</a>
+                            </li>                        
+                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <h5> 
+                                    <span class="material-symbols-outlined">logout</span>
+                                    Logout
+                                </h5>
+                            </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </header>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
             <div class="mx-2">
-                <a href="{{route('trip.create')}}" >
+                <a href="{{route('admin.create')}}" >
                     <button class="btn my-3 text-light" style="width:85px; background-color:#C19A6B;">
                         <span class="material-symbols-outlined">add</span>
                     </button>
@@ -115,19 +115,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach ($trips as $trip)
+                    @foreach ($admins as $admin)
                         <tr>
-                            <td><img src="/images/{{$trip['image']}}" width="100px"></td>
-                            <td>{{ $trip->name }}</td>
-                            <td>{{ $trip->rating }}</td>
-                            <td>{{ $trip->places }}</td>
-                            <td>{{ $trip->nombrepersonne }}</td>
-                            <td>{{ $trip->price }} DH</td>
-                            <td>{{ $trip->dateD }}</td>
-                            <td>{{ $trip->dateF }} </td>
-                            <td>{{ $trip->description }} </td>
+                            <td><img src="/images/{{$admin['image']}}" width="100px"></td>
+                            <td>{{ $admin->name }}</td>
+                            <td>{{ $admin->rating }}</td>
+                            <td>{{ $admin->places }}</td>
+                            <td>{{ $admin->nombrepersonne }}</td>
+                            <td>{{ $admin->price }} DH</td>
+                            <td>{{ $admin->dateD }}</td>
+                            <td>{{ $admin->dateF }} </td>
+                            <td>{{ $admin->description }} </td>
                             <td>
-                                <form action="{{ route('trip.destroy', $trip->id) }}" method="POST" id="deleteForm{{ $trip->id }}">
+                                <form action="{{ route('admin.destroy', $admin->id) }}" method="POST" id="deleteForm{{ $admin->id }}">
                                     @csrf
                                     @method('DELETE')
                                     <ul class="navbar-nav ms-auto">
@@ -138,7 +138,7 @@
                                                 </svg>
                                                 </a>
                                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                                    <a href="{{ route('trip.edit', $trip->id) }}" class="btn">
+                                                    <a href="{{ route('admin.edit', $admin->id) }}" class="btn">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                                             <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
                                                             <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
@@ -146,7 +146,7 @@
                                                         &nbsp;Editer
                                                     </a>
 
-                                                    <button type="button" onclick="confirmDelete('{{ $trip->id }}')" class="btn">
+                                                    <button type="button" onclick="confirmDelete('{{ $admin->id }}')" class="btn">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                                                             <path fill-rule="evenodd" d="M10.354 8l3.823-3.823a.5.5 0 0 0-.708-.708L9.646 7.293 5.823 3.469a.5.5 0 0 0-.708.708L8.293 8l-3.82 3.823a.5.5 0 1 0 .708.708L9.647 8.707l3.824 3.824a.5.5 0 0 0 .708-.708L10.354 8z"/>
                                                         </svg>
@@ -164,9 +164,9 @@
             </div>
             
             <script>
-                function confirmDelete(tripId) {
-                    if (confirm('Êtes-vous sûr de vouloir supprimer ce trip ?')) {
-                        document.getElementById('deleteForm' + tripId).submit();
+                function confirmDelete(adminId) {
+                    if (confirm('Êtes-vous sûr de vouloir supprimer ce admin ?')) {
+                        document.getElementById('deleteForm' + adminId).submit();
                     }
                 }
             </script>

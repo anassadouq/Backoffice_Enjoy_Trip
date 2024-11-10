@@ -110,7 +110,7 @@
                     <tbody>
                     @foreach ($reservations as $reservation)
                         <tr>
-                            <td><img src="/images/{{$reservation->trip->image}}" alt="" width="100"></td>
+                            <td><img src="/images/{{$reservation->admin->image}}" alt="" width="100"></td>
                             <td>{{ $reservation->prenom }} {{ $reservation->nom }}</td>
                             <td>{{ $reservation->cin }}</td>
                             <td>{{ $reservation->tel }}</td>

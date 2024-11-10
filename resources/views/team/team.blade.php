@@ -73,7 +73,7 @@
                 <div class="join_content text-center" data-aos="fade-up">
                     <h6 class="text-white">Come & Join Us</h6>
                     <h2 class="text-white">Making Adventure Tours and Activities Accessible and Affordable for Everyone.</h2>
-                    <a href="./contact.html" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/team" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

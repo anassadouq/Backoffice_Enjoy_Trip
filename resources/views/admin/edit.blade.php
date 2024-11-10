@@ -29,7 +29,7 @@
     </style>
 </head>
 <body>
-    <form action="{{ route('trip.update', $trip) }}" class="my-form container" method="post" enctype="multipart/form-data">
+    <form action="{{ route('admin.update', $admin) }}" class="my-form container" method="post" enctype="multipart/form-data">
         @csrf
         @method('PUT')
             <div class="mb-3">
@@ -38,41 +38,41 @@
             </div>
             <div class="mb-3">
                 <label for="nom" class="form-label">Name :</label>
-                <input type="text" value="{{ $trip->name }}" name="name" class="form-control">
+                <input type="text" value="{{ $admin->name }}" name="name" class="form-control">
             </div>
             <div class="row">
                 <div class="col mb-3">
                     <label for="nom" class="form-label">Rating :</label>
-                    <input type="text" value="{{ $trip->rating }}" name="rating" class="form-control">
+                    <input type="text" value="{{ $admin->rating }}" name="rating" class="form-control">
                 </div>
                     <div class="col mb-3">
                         <label for="nom" class="form-label">Places :</label>
-                        <input type="text" value="{{ $trip->places }}" name="places" class="form-control">
+                        <input type="text" value="{{ $admin->places }}" name="places" class="form-control">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col mb-3">
                         <label for="nom" class="form-label">Nombre Person :</label>
-                        <input type="text" value="{{ $trip->nombrepersonne }}" name="nombrepersonne" class="form-control">
+                        <input type="text" value="{{ $admin->nombrepersonne }}" name="nombrepersonne" class="form-control">
                     </div>
                     <div class="col mb-3">
                         <label for="lieu" class="form-label">Price :</label>
-                        <input type="text" value="{{ $trip->price }}" name="price" class="form-control">
+                        <input type="text" value="{{ $admin->price }}" name="price" class="form-control">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col mb-3">
                         <label for="eppMat" class="form-label">Date Début</label>
-                        <input type="date" name="dateD" value="{{ $trip->dateD }}" class="form-control">
+                        <input type="date" name="dateD" value="{{ $admin->dateD }}" class="form-control">
                     </div>
                     <div class="col mb-3">
                         <label for="eppMat" class="form-label">Date Fin</label>
-                        <input type="date" name="dateF" value="{{ $trip->dateF }}" class="form-control">
+                        <input type="date" name="dateF" value="{{ $admin->dateF }}" class="form-control">
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="eppDer" class="form-label">Description :</label>
-                    <input type="text" value="{{ $trip->description }}" name="description" class="form-control">
+                    <textarea placeholder="Trip description" name="description" class="form-control" rows="5" cols="50">{{$admin->description}}</textarea>
                 </div>
                 <button type="submit" class="form-control btn btn-secondary">
                     <span class="material-symbols-outlined">edit</span> 

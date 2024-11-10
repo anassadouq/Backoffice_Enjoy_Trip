@@ -32,7 +32,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <form method="post" action="{{ route('trip.store') }}" enctype="multipart/form-data" class="my-form">
+                <form method="post" action="{{ route('admin.store') }}" enctype="multipart/form-data" class="my-form">
                     @csrf
                     <div class="mb-3">
                         <label for="num" class="form-label">Image</label>
@@ -79,7 +79,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="eppDer" class="form-label">Description :</label>
-                        <input type="text" placeholder="Trip description" name="description" class="form-control" required>
+                        <textarea placeholder="Trip description" name="description" class="form-control" rows="5" cols="50"></textarea>
                     </div>
                     <button type="submit" class="form-control btn text-light" style="background-color:#C19A6B">Create</button>
                 </form>

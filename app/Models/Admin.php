@@ -6,7 +6,7 @@ use App\Models\Reservation;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Trip extends Model
+class Admin extends Model
 {
     use HasFactory;
     protected $fillable = [

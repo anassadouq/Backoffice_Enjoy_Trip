@@ -129,29 +129,29 @@
     <div class="container-fluid">
         <div class="row">
             <div class="explore_content" data-aos="fade-up">
-                <h6>Where to Go</h6>
+                <h6 id="contact">Where to Go</h6>
                 <h2>Explore The World With Us</h2>
             </div>
         </div>
         <div class="row" data-aos="fade-up">
             <div class="owl-carousel">
-                @foreach ($trips as $trip)
+                @foreach ($admins as $admin)
                     <div class="item">
                         <div class="explore-box">
                             <figure class="image mb-0">
-                                <img src="/images/{{$trip['image']}}" alt="image" class="img-fluid">
+                                <img src="/images/{{$admin['image']}}" alt="image" class="img-fluid">
                             </figure>
                             <div class="rating">
                                 <i class="fa-solid fa-star"></i>
-                                <span class="rate text-white">{{ $trip->rating }}</span>
+                                <span class="rate text-white">{{ $admin->rating }}</span>
                             </div>
                             <div class="content">
                                 <div class="text">
                                     <div class="place">
                                         <i class="fa-solid fa-location-dot"></i>
-                                        <span class="text-white">{{ $trip->places }} Places</span>
+                                        <span class="text-white">{{ $admin->places }} Places</span>
                                     </div>
-                                    <h4 class="text-white mb-0">{{ $trip->name }}</h4>
+                                    <h4 class="text-white mb-0">{{ $admin->name }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -170,7 +170,7 @@
                 <div class="join_content text-center" data-aos="fade-up">
                     <h6 class="text-white">Come & Join Us</h6>
                     <h2 class="text-white">Making Adventure Tours and Activities Accessible and Affordable for Everyone.</h2>
-                    <a href="./contact.html" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>

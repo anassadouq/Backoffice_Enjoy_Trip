@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\Trip;
+use App\Models\Admin;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -20,8 +20,8 @@ class Reservation extends Model
         'email',
     ];
 
-    public function trip()
+    public function admin()
     {
-        return $this->belongsTo(Trip::class, 'id_trip');
+        return $this->belongsTo(Admin::class, 'id_trip');
     }
 }
