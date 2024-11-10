@@ -1,6 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta charset="utf-8">
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/images/favicon/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/favicon/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/images/favicon/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/images/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/images/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/images/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/images/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./assets/images/favicon/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <!-- Latest compiled and minified CSS -->
+        <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/js/bootstrap.min.js">
+        <!-- Font Awesome link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <!-- StyleSheet link CSS -->
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/blog.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/aos.css" rel="stylesheet">
+        <link href="assets/css/magnific-popup.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    </head>
   <body>
     <section class="banner-con position-relative">
         <div class="swiper-container banner-background-slider">
@@ -110,255 +146,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="advices" role="tabpanel" aria-labelledby="advices-tab">
-                        <div class="single-blog-outer-con">
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img3.jpg" alt="single-blog-tab-img3"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="/blog">Our strength, Your Business</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="/blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img4.jpg" alt="single-blog-tab-img4"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">How’s the Economy?</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img5.jpg" alt="single-blog-tab-img5"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">How’s the Economy?</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img6.jpg" alt="single-blog-tab-img6"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">How’s the Economy?</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="announcements" role="tabpanel" aria-labelledby="announcements-tab">
-                        <div class="single-blog-outer-con">
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img5.jpg" alt="single-blog-tab-img5"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">How’s the Economy?</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img6.jpg" alt="single-blog-tab-img6"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">How’s the Economy?</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="news" role="tabpanel" aria-labelledby="news-tab">
-                        <div class="single-blog-outer-con">
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img3.jpg" alt="single-blog-tab-img3"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">Our strength, Your Business</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img4.jpg" alt="single-blog-tab-img4"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">How’s the Economy?</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="consultation" role="tabpanel" aria-labelledby="consultation-tab">
-                        <div class="single-blog-outer-con">
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img6.jpg" alt="single-blog-tab-img6"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">How’s the Economy?</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img3.jpg" alt="single-blog-tab-img3"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">Our strength, Your Business</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="development" role="tabpanel" aria-labelledby="development-tab">
-                        <div class="single-blog-outer-con">
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img4.jpg" alt="single-blog-tab-img4"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">How’s the Economy?</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="single-blog-box">
-                                <figure class="mb-0">
-                                    <img src="assets/images/single-blog-tab-img6.jpg" alt="single-blog-tab-img6"
-                                        loading="lazy" class="img-fluid">
-                                </figure>
-                                <div class="single-blog-details">
-                                    <ul class="list-unstyled">
-                                        <li class="position-relative"><i class="fas fa-user"></i> Posted by Admin</li>
-                                        <li class="position-relative"><i class="fas fa-calendar-alt"></i> October 30,
-                                            2022</li>
-                                    </ul>
-                                    <h4><a href="blog">How’s the Economy?</a></h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Lorem
-                                        ipsum dolor sit amet, consectetur</p>
-                                    <div class="generic-btn2">
-                                        <a href="blog">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                  
+                   
                     <nav aria-label="...">
                         <ul class="pagination">
                             <li class="page-item disabled">
@@ -414,4 +203,4 @@
     </body>
     </html>
 
-    @endsection
+@endsection

@@ -4,10 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TripsController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\ReservationController;
 
-Route::resource('/', HomeController::class);
+Route::resource('/', HomeController::class)->only(['index']);
+Route::get('/home', [HomeController::class, 'showTrips'])->name('home');
 Route::resource('/about', AboutController::class);
 Route::resource('/destination', DestinationController::class);
 
@@ -47,5 +49,6 @@ Route::resource('reservation', ReservationController::class)->except(['index', '
 // Authenticated routes for index and destroy
 Route::get('reservation', [ReservationController::class, 'index'])->name('reservation.index')->middleware('auth');
 Route::delete('reservation/{reservation}', [ReservationController::class, 'destroy'])->name('reservation.destroy')->middleware('auth');
+
 
 Auth::routes();

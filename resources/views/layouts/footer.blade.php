@@ -34,8 +34,8 @@
                             <h5 class="heading">About Us</h5>
                             <p class="text-size-14 text">Quia voluptas sit asper aut oit aut fugit sed quia consequuntur magni nesciunt ese ciu aorro...</p>                        
                             <ul class="list-unstyled mb-0 social-icons">
-                                <li><a href="https://www.facebook.com/" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
-                                <li><a href="https://www.instagram.com/" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+                                <li><a href="https://www.facebook.com/mrctrips" target="_blank" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+                                <li><a href="https://www.instagram.com/mrctrips" target="_blank" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
                                 <li><a href="https://www.youtube.com/" class="text-decoration-none"><i class="fa-brands fa-youtube social-networks"></i></a></li>
                             </ul>
                         </div>
@@ -69,16 +69,16 @@
                             <ul class="list-unstyled mb-0">
                                 <li class="text">
                                     <i class="fa-solid fa-phone"></i>
-                                    <a href="tel:+212661950492" class="text-decoration-none">+212 661 950 492</a>
+                                    <a href="tel:+212661257456" class="text-decoration-none">+212 661 257 456</a>
                                 </li>
                                 <li class="text">
                                     <i class="fa-solid fa-envelope"></i>
-                                    <a href="mailto:info@atreves.com" class="text-decoration-none">Info@atreves.com</a>
+                                    <a href="mailto:contact@mrctrips.com" class="text-decoration-none">contact@mrctrips.com</a>
                                 </li>
                                 <li class="text">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <a href="https://www.google.com/maps/place/21+King+St,+Melbourne+VIC+3000,+Australia/@-37.8199805,144.9529083,18z/data=!4m6!3m5!1s0x6ad65d52754eaecb:0x22f367daf52cbd47!8m2!3d-37.819936!4d144.9570765!16s%2Fg%2F11c2dj2n2c?entry=ttu" 
-                                        class="text-decoration-none address mb-0">21 King Street Melbourne, 3000, Australia
+                                    <a href="https://www.google.com/maps/place/MRC+Trips/@34.0215741,-6.8463322,17z/data=!3m1!4b1!4m6!3m5!1s0xda76c71b7fca0d3:0xd292c1e19d6cc119!8m2!3d34.0215741!4d-6.8437573!16s%2Fg%2F11hb72ss1d?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D" 
+                                        class="text-decoration-none address mb-0">Apt 24, Immeuble، 35 Av. du Liban, Rabat 10000
                                     </a>
                                 </li>
                             </ul>

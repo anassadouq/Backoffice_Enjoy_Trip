@@ -73,7 +73,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown active">
-                            <a class="nav-link " href="/trip">Trips </a>
+                            <a class="nav-link " href="/admin">Trips </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/reservation">Reservation</a>

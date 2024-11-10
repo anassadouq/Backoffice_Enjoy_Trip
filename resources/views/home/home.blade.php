@@ -12,20 +12,13 @@
                 <div class="swiper-slide" style="background-image: url('./assets/images/slide4.jpg');"></div>
             </div>
         </div>
-        @if(session('success'))
-            <center>
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            </center>
-        @endif
-
+    
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-12 mx-auto">
                     <div class="banner_content text-center" data-aos="fade-up">
                         <div class="banner-box">
-                            <form action="javascript:;">
+                            <form action="{{ route('home') }}" method="GET" onsubmit="scrollToTrips(event)">
                                 <div class="form-group float-left mb-0">
                                     <div class="upper">
                                         <i class="fa-solid fa-location-dot"></i>
@@ -38,7 +31,7 @@
                                         <i class="fa-solid fa-calendar-days"></i>
                                         <label for="date">Date</label>
                                     </div>
-                                    <input type="date" class="form_style" id="date" name="date">
+                                    <input type="date" class="form_style" id="date" name="date" value="{{ request()->input('date') }}">
                                 </div>
                                 <div class="form-group float-left mb-0 mr-0">
                                     <div class="upper">
@@ -47,8 +40,7 @@
                                     </div>
                                     <input type="text" class="form_style" id="people" placeholder="4 People" name="people">
                                 </div>
-                                <hr>
-                                <button><i class="search fa-solid fa-magnifying-glass"></i></button>
+                                <button type="submit"><i class="search fa-solid fa-magnifying-glass"></i></button>
                             </form>
                         </div>
                     </div>
@@ -169,7 +161,7 @@
                     </figure>
                     <h4>Exciting Journeys</h4>
                     <p class="text-size-16">Embark on thrilling expeditions and immerse yourself in unforgettable experiences.</p>
-                    <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/service" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
@@ -179,7 +171,7 @@
                     </figure>
                     <h4>Expert Guides</h4>
                     <p class="text-size-16">Our seasoned guides ensure a safe and enriching adventure, tailored to your needs.</p>
-                    <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/service" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
@@ -189,7 +181,7 @@
                     </figure>
                     <h4>Personalized Packages</h4>
                     <p class="text-size-16">Choose from a variety of custom packages designed to suit every traveler's desire.</p>
-                    <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/service" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
@@ -199,7 +191,7 @@
                     </figure> 
                     <h4>Scenic Trails</h4>
                     <p class="text-size-16">Explore breathtaking trails and discover the beauty of untouched nature.</p>
-                    <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/service" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div> 
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
@@ -209,7 +201,7 @@
                     </figure>
                     <h4>Family Adventures</h4>
                     <p class="text-size-16">Create lasting memories with family admins that are fun and suitable for all ages.</p>
-                    <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/service" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">            
@@ -219,7 +211,7 @@
                     </figure>
                     <h4>Comprehensive Support</h4>
                     <p class="text-size-16">Receive a complete guide to make your adventure seamless and worry-free.</p>
-                    <a href="./service.html" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="/service" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -233,7 +225,7 @@
                 <div class="join_content text-center" data-aos="fade-up">
                     <h6 class="text-white">Come & Join Us</h6>
                     <h2 class="text-white">Making Adventure Tours and Activities Accessible and Affordable for Everyone.</h2>
-                    <a href="#contact" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="./contact.html" class="text-decoration-none all_button">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -241,54 +233,52 @@
 </section>
 
 <!-- Place -->
-<section class="place-con position-relative">
+<section class="place-con position-relative" id="trips">
     <div class="container">
         <div class="row">
             <div class="col-12 mx-auto">
                 <div class="place_content text-center" data-aos="fade-up">
-                    <h6 >Best Places</h6>
-                    <h2 id="contact">Popular Destinations</h2>
+                    <h6>Best Places</h6>
+                    <h2>Popular Destinations</h2>
                 </div>
             </div>
         </div>
         <div class="row" data-aos="fade-up">
             <div class="owl-carousel owl-theme">
                 @foreach($admins as $admin)
-                <div class="item">
-                    <div class="place-box">
-                        <figure class="image mb-0">
-                            <img src="{{ asset('assets/images/' . $admin->image) }}" alt="image" class="img-fluid">
-                        </figure>
-                        <div class="lower_content">
-                            <div class="content">
-                                <div class="calendar">
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    <span class="day">
-                                        {{ \Carbon\Carbon::parse($admin->dateD)->diffInDays(\Carbon\Carbon::parse($admin->dateF)) }} Days
-                                    </span>
-
+                    <div class="item">
+                        <div class="place-box">
+                            <figure class="image mb-0">
+                                <img src="{{ asset('assets/images/' . $admin->image) }}" alt="image" class="img-fluid">
+                            </figure>
+                            <div class="lower_content">
+                                <div class="content">
+                                    <div class="calendar">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span class="day">
+                                            {{ \Carbon\Carbon::parse($admin->dateD)->diffInDays(\Carbon\Carbon::parse($admin->dateF)) }} Days
+                                        </span>
+                                    </div>
+                                    <div class="people">
+                                        <i class="fa-solid fa-user"></i>
+                                        <span class="person">{{ $admin->nombrepersonne }} Person</span>
+                                    </div>
                                 </div>
-                                <div class="people">
-                                    <i class="fa-solid fa-user"></i>
-                                    <span class="person">{{ $admin->nombrepersonne }} Person</span>
+                                <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $admin->id }}">
+                                    <h4>{{ $admin->name }}</h4>
+                                </a>
+                                <div class="value">
+                                    <span class="money"><span class="counter">{{ $admin->price }}</span>DH</span>
+                                    <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                                 </div>
-                            </div>
-                            <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $admin->id }}">
-                                <h4>{{ $admin->name }}</h4>
-                            </a>
-                            <div class="value">
-                                <span class="money"><span class="counter">{{ $admin->price }}</span>DH</span>
-                                <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
     </div>
 </section>
-
 
 <!-- Testimonial -->
 <section class="testimonial-con position-relative">
@@ -476,16 +466,24 @@
 <script src="assets/js/back-to-top-button.js"></script>
 <script src="assets/js/preloader.js"></script>
 <script src="assets/js/counter.js"></script>
+
 <script>
-var swiper = new Swiper('.swiper-container', {
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    effect: 'fade',
-    speed: 1000,
-});
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        effect: 'fade',
+        speed: 1000,
+    });
+
+    window.onload = function() {
+        if (window.location.hash === "#trips") {
+            // Smooth scroll to the #trips section
+            document.querySelector('#trips').scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 </script>
 
 @endsection
