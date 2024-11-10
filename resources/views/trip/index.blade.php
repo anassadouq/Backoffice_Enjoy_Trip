@@ -111,7 +111,7 @@
                             <th>Date Debut</th>
                             <th>Date Fin</th>
                             <th>Description</th>
-                            <th width="20%">Actions</th>
+                            <th width="10%">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -122,7 +122,7 @@
                             <td>{{ $trip->rating }}</td>
                             <td>{{ $trip->places }}</td>
                             <td>{{ $trip->nombrepersonne }}</td>
-                            <td>{{ $trip->price }}</td>
+                            <td>{{ $trip->price }} DH</td>
                             <td>{{ $trip->dateD }}</td>
                             <td>{{ $trip->dateF }} </td>
                             <td>{{ $trip->description }} </td>
@@ -192,25 +192,25 @@
                             buttons: [{
                                 extend: 'excelHtml5',
                                 exportOptions: {
-                                    columns: [ 0,1,2,3,4 ]
+                                    columns: [ 0,1,2,3,4,5,6,7,8,9 ]
                                 }
                             },
                             {
                                 extend: 'pdfHtml5',
                                 exportOptions: {
-                                    columns: [ 0,1,2,3,4 ]
+                                    columns: [ 1,2,3,4,5,6,7,8 ]
                                 }
                             },
                             {
                                 extend: 'csvHtml5',
                                 exportOptions: {
-                                    columns: [ 0,1,2,3,4 ]
+                                    columns: [ 1,2,3,4,5,6,7,8 ]
                                 },
                             },
                             {
                                 extend: 'print',
                                 exportOptions: {
-                                    columns: [ 0,1,2,3,4 ]
+                                    columns: [ 1,2,3,4,5,6,7,8 ]
                                 }
                             }],
                         }]

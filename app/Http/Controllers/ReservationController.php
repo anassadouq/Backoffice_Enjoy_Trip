@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reservation;
 use App\Models\Trip;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
+use App\Mail\ContactFormMail;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreReservationRequest;
 use App\Http\Requests\UpdateReservationRequest;
@@ -28,6 +30,7 @@ class ReservationController extends Controller
 
     public function store(StoreReservationRequest $request)
     {
+
         $reservation = new Reservation();
         $reservation->id_trip = $request->id_trip;
         $reservation->nom = $request->nom;
@@ -39,10 +42,17 @@ class ReservationController extends Controller
         $reservation->email = $request->email;
         
         $reservation->save();
+        
+        // Retrieve trip name from the database
+        $trip = Trip::find($reservation['id_trip']);
+        $reservation['trip_name'] = $trip ? $trip->name : 'Unknown Trip';
     
-        // Redirect to the same page with the reservation ID
-        return redirect('/');
-    }        
+        // Send email with unique subject and Message-ID
+        Mail::to('anassadouq123@gmail.com')->send(new ContactFormMail($reservation, uniqid()));
+     
+        // Redirect to a specific page or route after sending email with congratulatory message
+        return redirect('/')->with('success', 'Votre réservation est en cours de traitement, vous allez recevoir dans les 24h un e-mail vous invitant à suivre la procédure de paiement');
+    }    
 
     public function show($tripId)
     {

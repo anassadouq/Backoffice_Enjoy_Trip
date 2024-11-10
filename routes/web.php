@@ -4,14 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TripController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\ReservationController;
 
 Route::resource('/', HomeController::class);
 Route::resource('/about', AboutController::class);
-
-Route::get('/destination', function () {
-    return view('destination.destination');
-})->name('destination');
+Route::resource('/destination', DestinationController::class);
 
 Route::get('/review', function () {
     return view('review.review');

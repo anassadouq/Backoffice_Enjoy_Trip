@@ -94,31 +94,24 @@
         </div>
     </header>
             <div class="mx-2">
-                <a href="{{route('reservation.create')}}" >
-                    <button class="btn my-3 text-light" style="width:85px; background-color:#C19A6B;">
-                        <span class="material-symbols-outlined">add</span>
-                    </button>
-                </a>
                 <table class="text-center" id="myTable">
                     <thead>
                         <tr>
                             <th>Trip</th>
                             <th>Nom</th>
-                            <th>Prenom</th>
                             <th>CIN</th>
                             <th>Telephone</th>
                             <th>Date de départ</th>
                             <th>Ville de départ</th>
                             <th>Email</th>
-                            <th width="20%">Actions</th>
+                            <th width="10%">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                     @foreach ($reservations as $reservation)
                         <tr>
                             <td><img src="/images/{{$reservation->trip->image}}" alt="" width="100"></td>
-                            <td>{{ $reservation->nom }}</td>
-                            <td>{{ $reservation->prenom }}</td>
+                            <td>{{ $reservation->prenom }} {{ $reservation->nom }}</td>
                             <td>{{ $reservation->cin }}</td>
                             <td>{{ $reservation->tel }}</td>
                             <td>{{ $reservation->dateDep }}</td>
@@ -182,25 +175,25 @@
                             buttons: [{
                                 extend: 'excelHtml5',
                                 exportOptions: {
-                                    columns: [ 0,1,2,3,4 ]
+                                    columns: [ 1,2,3,4,5,6 ]
                                 }
                             },
                             {
                                 extend: 'pdfHtml5',
                                 exportOptions: {
-                                    columns: [ 0,1,2,3,4 ]
+                                    columns:  [ 1,2,3,4,5,6 ]
                                 }
                             },
                             {
                                 extend: 'csvHtml5',
                                 exportOptions: {
-                                    columns: [ 0,1,2,3,4 ]
+                                    columns:  [ 1,2,3,4,5,6 ]
                                 },
                             },
                             {
                                 extend: 'print',
                                 exportOptions: {
-                                    columns: [ 0,1,2,3,4 ]
+                                    columns:  [ 1,2,3,4,5,6 ]
                                 }
                             }],
                         }]

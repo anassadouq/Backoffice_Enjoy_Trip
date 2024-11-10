@@ -25,6 +25,8 @@
     </style>
 </head>
 <body>
+   
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -67,11 +69,17 @@
                         <label for="email" class="form-label">Email :</label>
                         <input type="email" name="email" placeholder="exemple@gmail.com" class="form-control" required>
                     </div>
-                    <button type="submit" class="my-1 form-control btn btn-dark text-light">Reserver</button>
+                    <button type="submit" class="my-1 form-control btn btn-dark text-light">Book Now</button>
                 </form>
 
             </div>
         </div>
     </div>
+
+    @if(session('success'))
+        <div class="alert alert-success mt-3">
+            {{ session('success') }}
+        </div>
+    @endif
 </body>
 </html>

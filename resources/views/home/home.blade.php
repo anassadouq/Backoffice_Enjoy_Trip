@@ -12,7 +12,14 @@
                 <div class="swiper-slide" style="background-image: url('./assets/images/slide4.jpg');"></div>
             </div>
         </div>
-    
+        @if(session('success'))
+            <center>
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            </center>
+        @endif
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-12 mx-auto">
@@ -271,7 +278,7 @@
                             </a>
                             <div class="value">
                                 <span class="money"><span class="counter">{{ $trip->price }}</span>DH</span>
-                                <a href="{{ url('/contact') }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                                <a href="{{ route('reservation.create', ['id_trip' => $trip->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
