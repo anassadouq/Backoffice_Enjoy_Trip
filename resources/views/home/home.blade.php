@@ -12,7 +12,13 @@
                 <div class="swiper-slide" style="background-image: url('./assets/images/slide4.jpg');"></div>
             </div>
         </div>
-    
+
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-12 mx-auto">
