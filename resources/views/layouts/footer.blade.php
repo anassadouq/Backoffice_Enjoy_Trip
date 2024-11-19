@@ -78,7 +78,7 @@
                                 <li class="text">
                                     <i class="fa-solid fa-location-dot"></i>
                                     <a href="https://www.google.com/maps/place/MRC+Trips/@34.0215741,-6.8463322,17z/data=!3m1!4b1!4m6!3m5!1s0xda76c71b7fca0d3:0xd292c1e19d6cc119!8m2!3d34.0215741!4d-6.8437573!16s%2Fg%2F11hb72ss1d?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D" 
-                                        class="text-decoration-none address mb-0">Apt 24, Immeuble، 35 Av. du Liban, Rabat 10000
+                                        class="text-decoration-none address mb-0" target="_blank">Apt 24, Immeuble، 35 Av. du Liban, Rabat 10000
                                     </a>
                                 </li>
                             </ul>

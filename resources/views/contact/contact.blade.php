@@ -46,7 +46,7 @@
                     </figure>
                     <h4>Our Location</h4>
                     <a href="https://www.google.com/maps/place/MRC+Trips/@34.0215741,-6.8463322,17z/data=!3m1!4b1!4m6!3m5!1s0xda76c71b7fca0d3:0xd292c1e19d6cc119!8m2!3d34.0215741!4d-6.8437573!16s%2Fg%2F11hb72ss1d?entry=ttu&g_ep=EgoyMDI0MTEwNi4wIKXMDSoASAFQAw%3D%3D" 
-                        class="text-decoration-none text-size-16 mb-0">Apt 24, Immeuble، 35 Av. du Liban, Rabat 10000
+                        class="text-decoration-none text-size-16 mb-0" target="_blank">Apt 24, Immeuble، 35 Av. du Liban, Rabat 10000
                     </a>
                 </div>
             </div>
@@ -110,7 +110,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.8689726788584!2d-6.843757299999999!3d34.021574099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76c71b7fca0d3%3A0xd292c1e19d6cc119!2sMRC%20Trips!5e0!3m2!1sen!2sma!4v1731256575533!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.8689726788584!2d-6.843757299999999!3d34.021574099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76c71b7fca0d3%3A0xd292c1e19d6cc119!2sMRC%20Trips!5e0!3m2!1sen!2sma!4v1732036597310!5m2!1sen!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
