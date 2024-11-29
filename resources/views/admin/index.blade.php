@@ -98,6 +98,11 @@
                 </nav>
             </div>
         </header>
+        <a href="{{route('admin.create')}}" >
+            <button class="btn my-3 mx-2 text-light" style="width:85px; background-color:#C19A6B;">
+                <span class="material-symbols-outlined">add</span>
+            </button>
+        </a>
 
         <div class="mx-2">
             <table class="text-center" id="myTable">
@@ -112,6 +117,7 @@
                         <th>Date Debut</th>
                         <th>Date Fin</th>
                         <th>Description</th>
+                        <th>Detail</th>
                         <th width="10%">Actions</th>
                     </tr>
                 </thead>
@@ -127,6 +133,7 @@
                             <td>{{ $admin->dateD }}</td>
                             <td>{{ $admin->dateF }} </td>
                             <td>{{ $admin->description }} </td>
+                            <td><a href="{{ route('detail_trip.show', $admin->id) }}">show</a></td>
                             <td>
                                 <form action="{{ route('admin.destroy', $admin->id) }}" method="POST" id="deleteForm{{ $admin->id }}">
                                     @csrf

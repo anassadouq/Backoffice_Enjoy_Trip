@@ -56,34 +56,46 @@
     </section>
     
 </div>
-<!-- Explore -->
-<section class="explore-con" id="dropdown">
-    <div class="container-fluid">
+<!-- Place -->
+<section class="place-con position-relative" id="trips">
+    <div class="container">
         <div class="row">
-            <div class="explore_content" data-aos="fade-up">
-                <h6>Where to Go</h6>
-                <h2>Explore The World With Us</h2>
+            <div class="col-12 mx-auto">
+                <div class="place_content text-center" data-aos="fade-up">
+                    <h6>Best Places</h6>
+                    <h2 id="contact">Popular Destinations</h2>
+                </div>
             </div>
         </div>
         <div class="row" data-aos="fade-up">
-            <div class="owl-carousel">
-                @foreach ($admins as $admin)
+            <div class="owl-carousel owl-theme">
+                @foreach($admins as $admin)
                     <div class="item">
-                        <div class="explore-box">
+                        <div class="place-box">
                             <figure class="image mb-0">
-                                <img src="/images/{{$admin['image']}}" alt="image" class="img-fluid">
+                                <a href="{{ route('detail_trip.show', $admin->id) }}">
+                                    <img src="{{ asset('assets/images/' . $admin->image) }}" alt="image" class="img-fluid">
+                                </a>
                             </figure>
-                            <div class="rating">
-                                <i class="fa-solid fa-star"></i>
-                                <span class="rate text-white">{{ $admin->rating }}</span>
-                            </div>
-                            <div class="content">
-                                <div class="text">
-                                    <div class="place">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <span class="text-white">{{ $admin->places }} Places</span>
+                            <div class="lower_content">
+                                <div class="content">
+                                    <div class="calendar">
+                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <span class="day">
+                                            {{ \Carbon\Carbon::parse($admin->dateD)->diffInDays(\Carbon\Carbon::parse($admin->dateF)) }} Days
+                                        </span>
                                     </div>
-                                    <h4 class="text-white mb-0">{{ $admin->name }}</h4>
+                                    <div class="people">
+                                        <i class="fa-solid fa-user"></i>
+                                        <span class="person">{{ $admin->nombrepersonne }} Person</span>
+                                    </div>
+                                </div>
+                                <a href="{{ route('detail_trip.show', $admin->id) }}" class="text-decoration-none">
+                                    <h4>{{ $admin->name }}</h4>
+                                </a>
+                                <div class="value">
+                                    <span class="money"><span class="counter">{{ $admin->price }}</span>DH</span>
+                                    <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none book_now">Book now<i class="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -93,6 +105,8 @@
         </div>
     </div>
 </section>
+
+
 
 <!-- About -->
 <section class="about-con position-relative">
@@ -238,182 +252,39 @@
     </div>
 </section>
 
-<!-- Place -->
-<section class="place-con position-relative" id="trips">
-    <div class="container">
+<section class="explore-con" id="dropdown">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-12 mx-auto">
-                <div class="place_content text-center" data-aos="fade-up">
-                    <h6>Best Places</h6>
-                    <h2 id="contact">Popular Destinations</h2>
-                </div>
+            <div class="explore_content" data-aos="fade-up">
+                <h6>Where to Go</h6>
+                <h2>Explore The World With Us</h2>
             </div>
         </div>
         <div class="row" data-aos="fade-up">
-            <div class="owl-carousel owl-theme">
-                @foreach($admins as $admin)
+            <div class="owl-carousel">
+                @foreach ($admins as $admin)
                     <div class="item">
-                        <div class="place-box">
+                        <div class="explore-box">
                             <figure class="image mb-0">
-                                <img src="{{ asset('assets/images/' . $admin->image) }}" alt="image" class="img-fluid">
+                                <img src="/images/{{$admin['image']}}" alt="image" class="img-fluid">
                             </figure>
-                            <div class="lower_content">
-                                <div class="content">
-                                    <div class="calendar">
-                                        <i class="fa-solid fa-calendar-days"></i>
-                                        <span class="day">
-                                            {{ \Carbon\Carbon::parse($admin->dateD)->diffInDays(\Carbon\Carbon::parse($admin->dateF)) }} Days
-                                        </span>
+                            <div class="rating">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="rate text-white">{{ $admin->rating }}</span>
+                            </div>
+                            <div class="content">
+                                <div class="text">
+                                    <div class="place">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span class="text-white">{{ $admin->places }} Places</span>
                                     </div>
-                                    <div class="people">
-                                        <i class="fa-solid fa-user"></i>
-                                        <span class="person">{{ $admin->nombrepersonne }} Person</span>
-                                    </div>
-                                </div>
-                                <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#blog-model-{{ $admin->id }}">
-                                    <h4>{{ $admin->name }}</h4>
-                                </a>
-                                <div class="value">
-                                    <span class="money"><span class="counter">{{ $admin->price }}</span>DH</span>
-                                    <a href="{{ route('reservation.create', ['id_trip' => $admin->id]) }}" class="text-decoration-none book_now">Book Now<i class="fa-solid fa-arrow-right"></i></a>
+                                    <h4 class="text-white mb-0">{{ $admin->name }}</h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonial -->
-<section class="testimonial-con position-relative">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="testimonial_wrapper position-relative" data-aos="zoom-in">
-                    <img src="./assets/images/customers.png" alt="image" class="img-fluid">
-                </div>
-            </div>
-            <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="testimonial_contentwrapper" data-aos="fade-up">
-                    <div class="testimonial_content">
-                        <h6>Testimonials</h6>
-                        <h2>What Our Customers Have To Say</h2>
-                    </div>
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="testimonial-box">
-                                    <div class="content-box">
-                                        <p class="text-size-16">Nemo enim ipsam voluptatem quia voluptas sit asperna aut odit aut 
-                                            fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem 
-                                            sequi nesciuntporro quisuam est, rui dolorem ipsum quia dolor sit amet, 
-                                            consectetur adieisci velit sed ruia.
-                                        </p>
-                                        <div class="content">
-                                            <figure class="testimonial-quote">
-                                                <img src="./assets/images/testimonial-quote.png" alt="image" class="img-fluid">
-                                            </figure>
-                                            <div class="designation-outer">
-                                                <span class="name">Kevin James</span>
-                                                <span class="review">Happy Client</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="testimonial-box">
-                                    <div class="content-box">
-                                        <p class="text-size-16">Nemo enim ipsam voluptatem quia voluptas sit asperna aut odit aut 
-                                            fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem 
-                                            sequi nesciuntporro quisuam est, rui dolorem ipsum quia dolor sit amet, 
-                                            consectetur adieisci velit sed ruia.
-                                        </p>
-                                        <div class="content">
-                                            <figure class="testimonial-quote">
-                                                <img src="./assets/images/testimonial-quote.png" alt="image" class="img-fluid">
-                                            </figure>
-                                            <div class="designation-outer">
-                                                <span class="name">Kevin James</span>
-                                                <span class="review">Happy Client</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pagination-outer">
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <i class="fa-solid fa-arrow-left"></i>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <i class="fa-solid fa-arrow-right"></i>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Partner -->
-<section class="partner-con">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="partner_content text-center" data-aos="fade-up">
-                    <h6>Partners</h6>
-                    <h2>Our Trusted Partners</h2>
-                </div>
-            </div>
-            <ul class="list-unstyled mb-0" data-aos="fade-up">
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner1.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner2.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-                <li>
-                    <figure class="mb-0 haus">
-                        <img src="./assets/images/partner3.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner4.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-            </ul>
-            <ul class="list-unstyled second mb-0" data-aos="fade-up">
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner5.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner6.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-                <li class="mb-0">
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner7.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-                <li class="mb-0">
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner8.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-            </ul>
         </div>
     </div>
 </section>

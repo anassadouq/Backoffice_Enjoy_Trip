@@ -2,134 +2,108 @@
 
 @section('content')
 
-<!-- Testimonial -->
-<section class="testimonial-con position-relative">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="testimonial_wrapper position-relative" data-aos="zoom-in">
-                    <img src="./assets/images/customers.png" alt="image" class="img-fluid">
-                </div>
+    <!-- Sub banner -->
+    <section class="banner-con position-relative">
+        <div class="swiper-container banner-background-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url('./assets/images/slide3.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('./assets/images/slide4.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('./assets/images/slide1.jpg');"></div>
+                <div class="swiper-slide" style="background-image: url('./assets/images/slide2.jpg');"></div>
             </div>
-            <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="testimonial_contentwrapper" data-aos="fade-up">
-                    <div class="testimonial_content">
-                        <h6>Testimonials</h6>
-                        <h2>What Our Customers Have To Say</h2>
-                    </div>
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="testimonial-box">
-                                    <div class="content-box">
-                                        <p class="text-size-16">Nemo enim ipsam voluptatem quia voluptas sit asperna aut odit aut 
-                                            fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem 
-                                            sequi nesciuntporro quisuam est, rui dolorem ipsum quia dolor sit amet, 
-                                            consectetur adieisci velit sed ruia.
-                                        </p>
-                                        <div class="content">
-                                            <figure class="testimonial-quote">
-                                                <img src="./assets/images/testimonial-quote.png" alt="image" class="img-fluid">
-                                            </figure>
-                                            <div class="designation-outer">
-                                                <span class="name">Kevin James</span>
-                                                <span class="review">Happy Client</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="testimonial-box">
-                                    <div class="content-box">
-                                        <p class="text-size-16">Nemo enim ipsam voluptatem quia voluptas sit asperna aut odit aut 
-                                            fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem 
-                                            sequi nesciuntporro quisuam est, rui dolorem ipsum quia dolor sit amet, 
-                                            consectetur adieisci velit sed ruia.
-                                        </p>
-                                        <div class="content">
-                                            <figure class="testimonial-quote">
-                                                <img src="./assets/images/testimonial-quote.png" alt="image" class="img-fluid">
-                                            </figure>
-                                            <div class="designation-outer">
-                                                <span class="name">Kevin James</span>
-                                                <span class="review">Happy Client</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pagination-outer">
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <i class="fa-solid fa-arrow-left"></i>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <i class="fa-solid fa-arrow-right"></i>
-                                <span class="sr-only">Next</span>
-                            </a>
+        </div>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-12 mx-auto">
+                    <div class="banner_content text-center" data-aos="fade-up">
+                        <div class="banner-box text-center">
+                            <h2 class="text-black">Services</h2>
+                            <h3 class="text-dark">Quis aute irure dolor in reprehenderit in voluptate velit esse cillum.</h3>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Partner -->
-<section class="partner-con">
+    </section>
+</div>
+<!-- Service Detail -->
+<section class="service_detail position-relative">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="partner_content text-center" data-aos="fade-up">
-                    <h6>Partners</h6>
-                    <h2>Our Trusted Partners</h2>
+                <div class="main-box">
+                    <figure class="image" data-aos="fade-up">
+                        <img src="./assets/images/adventure.jpg" alt="image" class="img-fluid">
+                    </figure>
+                    <h3 data-aos="fade-up">Family Adventures</h3>
+                    <p class="text1 text-size-16" data-aos="fade-up">Lorem ipsum dolor sit amet, consectet ur adipiscing elit, sed do eiusmod tem por incididunt ut labore. Eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Quis ipsum suspendisse. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                    </p>
+                    <p class="text2 text-size-16" data-aos="fade-up">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
+                        ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.
+                    </p>
+                    <ul class="list-unstyled list" data-aos="fade-up">
+                        <li class="text-size-16"><i class="fa-solid fa-check"></i>Quis ipsum suspendisse ultrices gravida</li>
+                        <li class="text-size-16"><i class="fa-solid fa-check"></i>Excepteur sint occaecat cupidatat.</li>
+                        <li class="text-size-16"><i class="fa-solid fa-check"></i>Duis aute irure dolor in voluta facis.</li>
+                        <li class="text-size-16"><i class="fa-solid fa-check"></i>Rerum hic tenetur a delectus au occae.</li>
+                    </ul>
+                    <p class="text1 text-size-16" data-aos="fade-up">Mabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Quis ipsum suspendisse. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.
+                    </p>
+                    <p class="text-size-16 mb-0" data-aos="fade-up">Sunt in culpa qui officia deserunt mollit. Lorem ipsum dolor sit amet, consectetur
+                        adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation.
+                    </p>
                 </div>
             </div>
-            <ul class="list-unstyled mb-0" data-aos="fade-up">
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner1.png" alt="image" class="img-fluid">
+        </div>
+    </div>
+</section>
+<!-- Service -->
+<section class="service-con service3-con position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <div class="service_content text-center" data-aos="fade-up">
+                    <h6>What We Offer</h6>
+                    <h2>Best Services We Offer</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row" data-aos="fade-up">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto">
+                <div class="service-box">
+                    <figure class="icon">
+                        <img src="./assets/images/service-icon1.png" alt="image" class="img-fluid">
                     </figure>
-                </li>
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner2.png" alt="image" class="img-fluid">
+                    <h4>Exciting Journeys</h4>
+                    <p class="text-size-16">Embark on thrilling expeditions and immerse yourself in unforgettable experiences.</p>
+                    <a href="/service-detail" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto">
+                <div class="service-box">
+                    <figure class="icon">
+                        <img src="./assets/images/service-icon2.png" alt="image" class="img-fluid">
                     </figure>
-                </li>
-                <li>
-                    <figure class="mb-0 haus">
-                        <img src="./assets/images/partner3.png" alt="image" class="img-fluid">
+                    <h4>Expert Guides</h4>
+                    <p class="text-size-16">Our seasoned guides ensure a safe and enriching adventure, tailored to your needs.</p>
+                    <a href="/service-detail" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12 mx-auto">
+                <div class="service-box">
+                    <figure class="icon">
+                        <img src="./assets/images/service-icon3.png" alt="image" class="img-fluid">
                     </figure>
-                </li>
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner4.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-            </ul>
-            <ul class="list-unstyled second mb-0" data-aos="fade-up">
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner5.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-                <li>
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner6.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-                <li class="mb-0">
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner7.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-                <li class="mb-0">
-                    <figure class="mb-0">
-                        <img src="./assets/images/partner8.png" alt="image" class="img-fluid">
-                    </figure>
-                </li>
-            </ul>
+                    <h4>Personalized Packages</h4>
+                    <p class="text-size-16">Choose from a variety of custom packages designed to suit every traveler's desire.</p>
+                    <a href="/service-detail" class="text-decoration-none learn_more">Learn More<i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

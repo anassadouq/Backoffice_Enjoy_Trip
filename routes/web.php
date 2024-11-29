@@ -5,13 +5,18 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TripsController;
-use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\VoyagesController;
+use App\Http\Controllers\DetailTripController;
 use App\Http\Controllers\ReservationController;
 
 Route::resource('/', HomeController::class)->only(['index']);
 Route::get('/home', [HomeController::class, 'showTrips'])->name('home');
 Route::resource('/about', AboutController::class);
-Route::resource('/destination', DestinationController::class);
+Route::get('/national', [VoyagesController::class, 'national'])->name('national');
+Route::get('/international', [VoyagesController::class, 'international'])->name('international');
+
+Route::resource('detail_trip',DetailTripController::class);
+Route::get('detail_trip/show/{adminId}', [DetailTripController::class, 'show'])->name('detail_trip.show');
 
 Route::get('/review', function () {
     return view('review.review');
@@ -28,10 +33,6 @@ Route::get('/team', function () {
 Route::get('/service', function () {
     return view('service.service');
 })->name('service');
-
-Route::get('/service-detail', function () {
-    return view('service-detail.service-detail');
-})->name('service-detail');
 
 Route::get('/blog', function () {
     return view('blog.blog');
