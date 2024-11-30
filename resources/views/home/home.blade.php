@@ -107,7 +107,6 @@
 </section>
 
 
-
 <!-- About -->
 <section class="about-con position-relative">
     <div class="container">
@@ -237,6 +236,7 @@
         </div>
     </div>
 </section>
+
 <!-- Join -->
 <section class="join-con position-relative">
     <div class="container">

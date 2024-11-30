@@ -46,8 +46,7 @@
                             <ul class="list-unstyled mb-0">
                                 <li><i class="fa-solid fa-arrow-right"></i><a href="/">Home</a></li>
                                 <li><i class="fa-solid fa-arrow-right"></i><a href="/about">About Us</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="/destination">Destinations</a></li>
-                                <li><i class="fa-solid fa-arrow-right"></i><a href="/blog">Blog</a></li>
+                                <li><i class="fa-solid fa-arrow-right"></i><a href="/national">Voyages</a></li>
                                 <li><i class="fa-solid fa-arrow-right"></i><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
@@ -88,7 +87,7 @@
             </div>
         </div>
         <div class="copyright">
-            <p class="mb-0">Copyright ©2024 Atreves.com All Rights Reserved</p>
+            <p class="mb-0">Copyright ©2024 mrctrips.com All Rights Reserved</p>
         </div>
     </div>
 </section>
